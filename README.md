@@ -1,3 +1,6 @@
+# Installation
+`poetry add git+https://github.com/SeniorK0tik/snaphot_decorator.git`
+
 # Examples
 ```python
 # Директория куда будут складываться снепшоты
