@@ -8,7 +8,7 @@ from functools import wraps
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, Callable, List
 
-import aiofiles
+import aiofiles.os
 
 
 
