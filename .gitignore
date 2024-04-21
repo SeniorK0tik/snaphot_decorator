@@ -1,0 +1,66 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache
+.ruff_cache
+.idea/
+# C extensions
+*.so
+
+# logs
+*.log
+
+# ini files
+*.ini
+# ini files for docker
+*.ini.docker
+
+# temporary local files
+*.local
+
+# trash files
+trash/
+snapshots/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# pyenv
+.python-version
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+# Environments
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Pyre type checker
+.pyre/
+.idea/
+.env

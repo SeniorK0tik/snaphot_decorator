@@ -1,0 +1,101 @@
+[tool.poetry]
+name = "snapshot-decorator"
+version = "0.1.0"
+description = "Decorator to save function result periodiacally"
+authors = ["SeniorKotik <ndrus24@bk.ru>"]
+readme = "README.md"
+packages = [{include = "snapshot_deco"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aiofiles = "^23.2.1"
+
+
+[tool.poetry.group.test.dependencies]
+ruff = "^0.4.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.ruff]
+target-version = "py311"
+line-length = 115
+
+
+[tool.ruff.lint]
+extend-select = [
+    "ANN", # flake8-annotations
+    "ASYNC", # flake8-async
+    "B", # flake8-bugbear
+    "BLE", # flake8-blind-except
+    "C4", # flake8-comprehensions
+    "C90", # mccabe
+    "ERA", # eradicate
+    "I",  # isort
+    "ICN", # flake8-import-conventions
+    "INP", # flake8-no-pep420
+    "ISC", # flake8-implicit-str-concat
+    "N", # pep8-naming
+    "NPY", # NumPy-specific rules
+    "PGH", # pygrep-hooks
+    "PIE", # flake8-pie
+    "Q", # flake8-quotes
+    "RET", # flake8-return
+    "RSE", # flake8-raise
+    "RUF", # Ruff-specific rules
+    "S", # flake8-bandit
+    "SIM", # flake8-simplify
+    "T20", # flake8-print
+    "TCH", # flake8-type-checking
+    "TID", # flake8-tidy-imports
+    "YTT", # flake8-2020
+    "W",
+    "E"
+]
+
+ignore = [
+    "E402", "B905", "N818", "S101",
+    "ANN101", "ANN002", "ANN003", "ANN401",
+    "RUF001", "RUF002", "RUF003", "BLE001",
+    "N815"
+]
+
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+    "trash"
+]
+
+[tool.ruff.lint.isort]
+# Use a single line after each import block.
+lines-after-imports = 3
+
+[tool.ruff.lint.mccabe]
+# Flag errors (`C901`) whenever the complexity level exceeds 5.
+max-complexity = 5
+
+[tool.ruff.lint.per-file-ignores]
+"**/conf/*" = ["N805"]
