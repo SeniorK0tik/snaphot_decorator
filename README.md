@@ -1,3 +1,6 @@
+# Requirements
+Поддерживает только оборачивание асинхронных функций
+
 # Installation
 `poetry add git+https://github.com/SeniorK0tik/snaphot_decorator.git`
 
